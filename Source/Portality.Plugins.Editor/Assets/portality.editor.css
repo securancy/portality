@@ -1,0 +1,79 @@
+﻿/* 
+	----------------------
+	Portality™ | Styling
+	http://portality.nl
+	----------------------
+*/
+
+.normal	 {color: black}
+.editing {color: red}
+
+#EditWindow {
+	/* optional styling information */
+	/*font-size: 12px;*/
+}
+
+.editable {
+	/*border: 1px solid #ccc;*/
+}
+.editable:hover {
+	cursor: pointer;
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+
+/*
+ * Dialog Styling
+ */
+ 
+/*
+ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix
+*/
+
+.ui-widget-overlay 
+{
+	/* Background opacity */
+	background: black;
+	opacity: 0.5;
+	filter: alpha(opacity = 50);
+	position: absolute;
+	top: 0;
+	left: 0;
+ }
+ 
+.ui-dialog 
+{
+	background-color: #fff;
+	font-family: Consolas, Lucida Grande, Arial;
+	font-size: 10pt;
+	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+ 
+	.ui-dialog-titlebar, .ui-dialog-buttonset
+	{
+		background-color: #000;
+		color: #fff;
+		font-weight: bold;
+		padding: 5px;
+	}
+
+#EditWindow 
+{
+	
+}
+
+#PortalityContentBox {
+	font-family: Consolas, Courier New;
+	font-size: 10pt;
+	height: 95%;
+	width: 100%;
+	resize: none;
+	border: none;
+}
+
+
+

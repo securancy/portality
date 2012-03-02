@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portality.Web.Mvc", "Portality.Web.Mvc\Portality.Web.Mvc.csproj", "{95658893-2BC6-493F-8DA8-54B1F8702F08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins and Extensions", "Plugins and Extensions", "{A87E594C-9773-4E7E-958F-817FF9E2D8DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portality.Plugins.Editor", "Portality.Plugins.Editor\Portality.Plugins.Editor.csproj", "{4D3F227B-F84F-44D6-BDCA-B6B19648C6F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portality.Tests", "Portality.Tests\Portality.Tests.csproj", "{CD1DCCA9-F730-4946-AAED-C9879B463256}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0B07AF25-60DD-4AFE-A1DD-BC22B6656B4E}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Portality.vsmdi = Portality.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3C38F9FF-A874-4254-95C0-3E260D8C220A}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Portality.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95658893-2BC6-493F-8DA8-54B1F8702F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95658893-2BC6-493F-8DA8-54B1F8702F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95658893-2BC6-493F-8DA8-54B1F8702F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95658893-2BC6-493F-8DA8-54B1F8702F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D3F227B-F84F-44D6-BDCA-B6B19648C6F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D3F227B-F84F-44D6-BDCA-B6B19648C6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D3F227B-F84F-44D6-BDCA-B6B19648C6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D3F227B-F84F-44D6-BDCA-B6B19648C6F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD1DCCA9-F730-4946-AAED-C9879B463256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1DCCA9-F730-4946-AAED-C9879B463256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1DCCA9-F730-4946-AAED-C9879B463256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1DCCA9-F730-4946-AAED-C9879B463256}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D3F227B-F84F-44D6-BDCA-B6B19648C6F1} = {A87E594C-9773-4E7E-958F-817FF9E2D8DA}
+		{CD1DCCA9-F730-4946-AAED-C9879B463256} = {3C38F9FF-A874-4254-95C0-3E260D8C220A}
+	EndGlobalSection
+EndGlobal
