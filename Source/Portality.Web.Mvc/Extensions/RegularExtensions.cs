@@ -5,6 +5,10 @@ using System.Text;
 
 namespace Portality.Web.Mvc
 {
+    /// <summary>
+    /// Provides extensions for string manipulation using, primarily, regular expressions
+    /// or sort-like functionality.
+    /// </summary>
     public static class RegularExtensions
     {
         /// <summary>

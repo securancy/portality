@@ -12,13 +12,13 @@ namespace Portality.Web.Mvc.Extensions.InnerExtensions
         internal static string PageTitle(this HtmlHelper html, string title)
         {
             if (String.IsNullOrEmpty(title))
-                return "Juliën Hanssens (hanssens.com)";
+                return "Powered by Portality";
 
             if (title.Contains("|"))
                 return title;
 
             // In all other case, append a suffix
-            return String.Format("{0} | Juliën Hanssens (hanssens.com)", title);
+            return String.Format("{0} | Portality", title);
         }
 
         /// <summary>

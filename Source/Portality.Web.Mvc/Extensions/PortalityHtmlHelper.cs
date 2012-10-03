@@ -25,6 +25,9 @@ namespace Portality.Web.Mvc
 
     }
 
+    /// <summary>
+    /// Provides access to the @Html.Portality() namespace.
+    /// </summary>
     public class PortalityHelperExtensions
     {
         #region -- Singleton plumbing for @Html.Portality() namespace --
@@ -91,6 +94,11 @@ namespace Portality.Web.Mvc
         /// </example>
         public HeaderIncludeRegistrar Scripts { get; private set; }
 
+        /// <summary>
+        /// Renders the page title.
+        /// </summary>
+        /// <param name="title"></param>
+        /// <returns></returns>
         public string PageTitle(string title)
         {
             return HtmlHelperExtensions.PageTitle(_htmlHelper, title);

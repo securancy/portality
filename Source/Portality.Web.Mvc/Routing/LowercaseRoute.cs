@@ -14,6 +14,7 @@ namespace Portality.Web.Mvc
     /// <remarks>
     /// Inspiration for this class is from: 
     /// http://stackoverflow.com/questions/878578/how-can-i-have-lowercase-routes-in-asp-net-mvc
+    /// However, small bits of plumbing here and there have been added to provide a more suitable variation.
     /// </remarks>
     public class LowercaseRoute : Route
     {
