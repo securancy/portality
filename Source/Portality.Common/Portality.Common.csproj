@@ -49,7 +49,7 @@
     <Compile Include="Extensions\RegularExtensions.cs" />
     <Compile Include="Helpers\SessionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Routing\LowercaseRoute.cs" />
+    <Compile Include="Routing\LowerCaseRoute.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
