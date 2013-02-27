@@ -15,16 +15,16 @@ namespace Portality.Common
     /// Inspiration for this class is from: 
     /// http://stackoverflow.com/questions/878578/how-can-i-have-lowercase-routes-in-asp-net-mvc
     /// </remarks>
-    public class LowercaseRoute : Route
+    public class LowerCaseRoute : Route
     {
 
-        public LowercaseRoute(string url, IRouteHandler routeHandler)
+        public LowerCaseRoute(string url, IRouteHandler routeHandler)
             : base(url, routeHandler) { }
-        public LowercaseRoute(string url, RouteValueDictionary defaults, IRouteHandler routeHandler)
+        public LowerCaseRoute(string url, RouteValueDictionary defaults, IRouteHandler routeHandler)
             : base(url, defaults, routeHandler) { }
-        public LowercaseRoute(string url, RouteValueDictionary defaults, RouteValueDictionary constraints, IRouteHandler routeHandler)
+        public LowerCaseRoute(string url, RouteValueDictionary defaults, RouteValueDictionary constraints, IRouteHandler routeHandler)
             : base(url, defaults, constraints, routeHandler) { }
-        public LowercaseRoute(string url, RouteValueDictionary defaults, RouteValueDictionary constraints, RouteValueDictionary dataTokens, IRouteHandler routeHandler) : base(url, defaults, constraints, dataTokens, routeHandler) { }
+        public LowerCaseRoute(string url, RouteValueDictionary defaults, RouteValueDictionary constraints, RouteValueDictionary dataTokens, IRouteHandler routeHandler) : base(url, defaults, constraints, dataTokens, routeHandler) { }
         public override VirtualPathData GetVirtualPath(RequestContext requestContext, RouteValueDictionary values)
         {
             VirtualPathData path = base.GetVirtualPath(requestContext, values);
@@ -80,7 +80,7 @@ namespace Portality.Common
         /// <returns></returns>
         public static Route MapLowerCaseRoute(this RouteCollection routes, string name, string url, object defaults, string constraints, string[] namespaces)
         {
-            Route route = new LowercaseRoute(url, new MvcRouteHandler())
+            Route route = new LowerCaseRoute(url, new MvcRouteHandler())
             {
                 Defaults = new RouteValueDictionary(defaults),
                 Constraints = new RouteValueDictionary(constraints),
