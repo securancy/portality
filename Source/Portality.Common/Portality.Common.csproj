@@ -42,10 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\InnerExtensions\HeaderIncludeRegistrar.cs" />
-    <Compile Include="Extensions\InnerExtensions\HtmlHelperExtensions.cs" />
+    <Compile Include="Extensions\MenuLinkExtensions.cs" />
     <Compile Include="Extensions\MultiColumnRepeaterExtensions.cs" />
-    <Compile Include="Extensions\PortalityHtmlHelper.cs" />
     <Compile Include="Extensions\RegularExtensions.cs" />
     <Compile Include="Helpers\SessionManager.cs" />
     <Compile Include="Performance\MonitorDurationAttribute.cs" />
@@ -54,7 +52,9 @@
     <Compile Include="Routing\AreaLowerCaseRoute.cs" />
     <Compile Include="Routing\LowerCaseRoute.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Extensions\InnerExtensions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
