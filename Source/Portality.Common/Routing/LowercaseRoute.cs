@@ -78,7 +78,7 @@ namespace Portality.Common
         /// <param name="constraints">A set of expressions that specify valid values for a URL parameter.</param>
         /// <param name="namespaces">An enumerable set of namespaces for the application.</param>
         /// <returns></returns>
-        public static Route MapLowerCaseRoute(this RouteCollection routes, string name, string url, object defaults, string constraints, string[] namespaces)
+        public static Route MapLowerCaseRoute(this RouteCollection routes, string name, string url, object defaults, object constraints, string[] namespaces)
         {
             Route route = new LowerCaseRoute(url, new MvcRouteHandler())
             {

@@ -49,6 +49,7 @@
     <Compile Include="Extensions\RegularExtensions.cs" />
     <Compile Include="Helpers\SessionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routing\AreaLowerCaseRoute.cs" />
     <Compile Include="Routing\LowerCaseRoute.cs" />
   </ItemGroup>
   <ItemGroup />
