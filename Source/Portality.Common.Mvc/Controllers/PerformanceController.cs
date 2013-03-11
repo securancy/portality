@@ -14,15 +14,21 @@ namespace Portality.Common.Mvc.Controllers
         public ActionResult MonitorDuration()
         {
             System.Threading.Thread.Sleep(2000);
-
-            return RedirectToAction("MonitorDurationResult");
+            return View();
         }
 
-        public ActionResult MonitorDurationResult()
+        [MonitorDuration(Name = "MyCustomName")]
+        public ActionResult MonitorDurationWithName()
         {
-            var value = ViewBag.Something;
-            
-            ViewBag.TimeElapsed = this.ElapsedTime();
+            System.Threading.Thread.Sleep(2000);
+            return RedirectToAction("MonitorDurationWithNameResults");
+        }
+
+        public ActionResult MonitorDurationWithNameResults()
+        {
+            if (ViewBag.TimeElapsed == null)
+                ViewBag.TimeElapsed = this.ElapsedTime("MyCustomName");
+
             return View();
         }
 

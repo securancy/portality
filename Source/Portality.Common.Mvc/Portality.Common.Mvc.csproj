@@ -140,7 +140,10 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Performance\MonitorDurationResult.cshtml" />
+    <Content Include="Views\Performance\MonitorDuration.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Performance\MonitorDurationWithNameResults.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

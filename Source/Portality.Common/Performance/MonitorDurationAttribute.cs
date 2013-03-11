@@ -18,13 +18,18 @@ namespace Portality.Common.Performance
     /// </remarks>
     public class MonitorDurationAttribute : ActionFilterAttribute
     {
-        protected Stopwatch _Stopwatch { get; set; }
+        protected Stopwatch stopwatch { get; set; }
+
+        /// <summary>
+        /// Provide a name, for distincting multiple MonitorDuration methods.
+        /// </summary>
+        public string Name { get; set; }
 
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             // Initialize a new Stopwatch instance - and start it immediately
-            _Stopwatch = new Stopwatch();
-            _Stopwatch.Start();
+            stopwatch = new Stopwatch();
+            stopwatch.Start();
             
             // Execute the normal behaviour
             base.OnActionExecuting(filterContext);
@@ -32,18 +37,24 @@ namespace Portality.Common.Performance
 
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            // Finish up
+            // End the monitoring, 
+            stopwatch.Stop();
+
+            // Fetch elapsed time (in seconds)
+            var timeElapsed = stopwatch.Elapsed.TotalSeconds;
+
+            // Store the result in the ViewBag. Note that this will
+            // not be available when you redirect to another action.
+            // In this case, the viewResult will be null.
+            var viewResult = filterContext.Result as ViewResult;
+            if (viewResult != null)
+                viewResult.ViewBag.TimeElapsed = timeElapsed;
+
+            // Always store the result in TempData
+            filterContext.Controller.TempData["TimeElapsed" + Name] = timeElapsed;
+
+            // Finish up, and provide the results to the Controller
             base.OnActionExecuted(filterContext);
-
-            // End the monitoring, fetch elapsed time (in seconds)
-            _Stopwatch.Stop();
-            
-            var timeElapsed = _Stopwatch.Elapsed.TotalSeconds;
-
-            filterContext.HttpContext.Items.Add("_ElapsedTime", timeElapsed);
-            filterContext.Controller.ViewBag.TimeElapsed = timeElapsed;
-            filterContext.Controller.TempData["TimeElapsed"] = timeElapsed;
-            filterContext.Controller.ViewBag.Something = "Darkside";
         }
 
     }
